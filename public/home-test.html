@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Homepage</title>
+    <link rel="stylesheet" type="text/css" href="css/home.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">Smarthome IoT</a>
+                    </div>
+                    <ul class="nav nav-pills nav-justified">
+                        <li class="active"><a href="#">Homepage</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="nav nav-pills">
+                    <li class="active"><a data-toggle="pill" href="#home">Home</a></li>
+                    <li><a data-toggle="pill" href="#menu1">Details</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div id="home" class="tab-pane fade in active">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Go-home.svg/480px-Go-home.svg.png"
+                                        alt="home-image.img" style="width: 300px; height: 300px; margin: 0 auto; display: block">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="information">
+                                    <h1>Your home's Information</h1>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <ul class="list-group">
+                                        <li class="list-group-item list-group-item-success">Number of rooms: <span
+                                                class="badge" id="roomNum"></span></li>
+                                        <li class="list-group-item list-group-item-info">Number of devices: <span class="badge"
+                                                id="deviNum"></span></li>
+                                        <li class="list-group-item list-group-item-warning">Devices available: <span
+                                                class="badge" id="deviAva"></span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="menu1" class="tab-pane fade">
+                        <br>
+                        <button type="button" onclick="loadRoom()"> Get Room</button>
+
+                        <form>
+                            <div class="form-group">
+                                <label>Choose your room</label>
+                                <select class="form-control" id="room">
+
+                                </select>
+                                <br>
+                                <button type="button" onclick="loadDevice()"> Get device</button>
+
+                                <label>room : <span id="roomSe"></span></label>
+                                <select class="form-control" id="device">
+
+                                </select>
+                                <br>
+                                <button type="button" onclick="loadDeviceDetails()">Get Detail of the <span id="deviName"></span></button>
+                                <ul id="details">
+                                </ul>
+                                <div id="chart" style="text-align: center">
+
+                                </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/home.js"></script>
+
+
+</body>
+
+</html>

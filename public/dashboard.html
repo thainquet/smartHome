@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Homepage</title>
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container bgcw">
+        <div class="row">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">SmartHome IoT</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#home">Manage</a></li>
+                        <li><a href="#menu1">Detail</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/"><span class="glyphicon glyphicon-user"></span>Log out</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="row">
+            <div class="col-md-offset-2 col-md-8 bgcw">
+                <input type="text" placeholder="Search" id="search">
+                <button type="button" class="btn btn-default btn-lg" style="margin: auto" onclick="load()">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+            </div>
+            
+        </div>
+        <div class="row ct250">
+            <div id="load" class="setCenter" style="margin: auto">
+
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12" id="footer">
+                <p>
+                    Copyright: Thainq 2018
+                </p>
+            </div>
+        </div>
+        <script>
+            let load = () => {
+                document.getElementById("load").innerHTML = `<div class="loader mt"></div>`;
+            }
+        </script>
+
+</body>
+
+</html>

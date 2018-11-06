@@ -1,0 +1,120 @@
+body {
+    background-image: url('http://3.bp.blogspot.com/-Oe26GY7y9Lk/UbVdWKUQ7BI/AAAAAAAAAMA/iRE7wfVOSZg/s200/abstract-green-tile-pattern.jpg');
+
+}
+
+body {
+    background-image: url('http://3.bp.blogspot.com/-Oe26GY7y9Lk/UbVdWKUQ7BI/AAAAAAAAAMA/iRE7wfVOSZg/s200/abstract-green-tile-pattern.jpg');
+    margin: 0;
+}
+
+.bgcw {
+    background: #DDD;
+}
+
+img {
+    margin: 0 auto;
+    display: block
+}
+
+#footer {
+    background-color: #333
+}
+
+#footer>p {
+    padding: 20px !important;
+    color: #DDD;
+    margin: 0px;
+}
+
+.setCenter {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+    width: 95%;
+}
+
+button {
+    background: #ddd !important;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+
+.mt {
+    margin-top: 20px;
+}
+
+.ct250 {
+    height: 250px;
+}
+
+.bgw {
+    background-color: #fff;
+}
+
+.logo {
+    font-size: 20px;
+    margin: auto;
+    text-align: center;
+    background: #122143;
+    border: 1px solid #0d172e;
+}
+.navi ul li {
+    list-style-type: none;
+    height: 100px;
+    background: #122143;
+    border: 1px solid #0d172e;
+    display: flex;
+    margin-left: -40px;
+}
+
+.navi i {
+    font-size: 20px;
+    margin: auto;
+    color: #5584ff;
+}
+
+.navi a {
+    margin: auto;
+    text-align: center;
+    color: #ffffff;
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.loader {
+  display: inline-block;
+  width: 64px;
+  height: 64px;
+}
+.loader:after {
+  content: " ";
+  display: block;
+  width: 46px;
+  height: 46px;
+  margin: 1px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  border-color: #333 transparent #fff transparent;
+  animation: loader 1.2s linear infinite;
+}
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Homepage</title>
+    <link rel="stylesheet" type="text/css" href="css/home.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container bgcw">
+        <div class="row">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">SmartHome IoT</a>
+                    </div>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#home">Home</a></li>
+                        <li><a href="#menu1">Detail</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="/"><span class="glyphicon glyphicon-user"></span>Log out</a></li>
+                      </ul>
+                </div>
+            </nav>
+        </div>
+        <br>
+        <div class="row">
+            <div>
+                <div id="home" class="tab-pane fade in active">
+                    <div class="row">
+                        <div class="col-md-1"></div>
+                        <div class="col-md-5">
+                            <div>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Go-home.svg/480px-Go-home.svg.png"
+                                    alt="home-image.img" style="width: 300px; height: 300px;">
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="information">
+                                <h1>Your home's Information</h1>
+                                <br>
+                                <br>
+                                <br>
+                                <ul class="list-group">
+                                    <li class="list-group-item list-group-item-success">Number of rooms: <span class="badge"
+                                            id="roomNum"></span></li>
+                                    <li class="list-group-item list-group-item-info">Number of devices: <span class="badge"
+                                            id="deviNum"></span></li>
+                                    <li class="list-group-item list-group-item-warning">Devices available:
+                                        <span class="badge" id="deviAva"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div style="text-align: center">
+                    <button type="button" class="btn btn-success" onclick="loadChoice()">Click for more detail
+                        information of the lights</button>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="choice">
+
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div id="bub">
+
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div id="light">
+                    <ul id="details">
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="switch" class="setCenter">
+
+                </div>
+                <br>
+                <div id="chart" class="setCenter">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" id="footer">
+                <p>
+                    Copyright:
+                </p>
+            </div>
+        </div>
+        <script src="js/home.js"></script>
+
+
+</body>
+
+</html>

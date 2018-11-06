@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <canvas id="Amperage" width="400px" height="400px"></canvas>
+            </div>
+            <div class="col-md-6">
+                <canvas id="Voltage" width="400px" height="400px"></canvas>
+            </div>
+        </div>
+    </div>
+    <script>
+        var ctx = document.getElementById("Amperage").getContext('2d');
+        var cty = document.getElementById("Voltage").getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ["0h", "3h", "6h", "9h", "12h"],
+                datasets: [{
+                    label: "Amperage (A)",
+                    data: [2, 2.3, 2.5, 2, 2],
+                    fill: true,
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                // animation: {
+                //     duration: 0, // general animation time
+                // },
+                // hover: {
+                //     animationDuration: 0, // duration of animations when hovering an item
+                // },
+                // responsiveAnimationDuration: 0,
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            max: 5,
+                            min: 0,
+                            stepSize: 0.5
+                        }
+                    }]
+                },
+                legend: {
+                    display: true,
+                    position: 'bottom'
+                },
+                title: {
+                    display: true,
+                    text: 'Amperage for last 12 hours'
+                }
+            }
+        });
+        var myChart2 = new Chart(cty, {
+            type: 'line',
+            data: {
+                labels: ["0h", "3h", "6h", "9h", "12h"],
+                datasets: [{
+                    label: "Voltage (V)",
+                    data: [220, 215, 215, 230, 220],
+                    borderColor: [
+                        'rgba(255,99,132,1)',
+                    ],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                // animation: {
+                //     duration: 0, // general animation time
+                // },
+                // hover: {
+                //     animationDuration: 0, // duration of animations when hovering an item
+                // },
+                // responsiveAnimationDuration: 0,
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            max: 240,
+                            min: 150,
+                            stepSize: 10
+                        }
+                    }]
+                },
+                legend: {
+                    display: true,
+                    position: 'bottom'
+                },
+                title: {
+                    display: true,
+                    text: 'Voltage for last 12 hours'
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
